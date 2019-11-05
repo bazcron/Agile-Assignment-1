@@ -37,7 +37,24 @@ module.exports = mongoose.model('users', usersSchema);
 
 I opened a terminal and set up an initial git repository inside the project folder: git init
 
+i then created a .gitignore file with the following text: 
+/node_modules
+*.log
+package-lock.json
+/**/.DS_Store*
+*DS_Store*
 
+which excludes all the node_modules, log files and anything named .ds_store
+
+i set up an initial commit:
+git add -A 
+git commit -m "Initial project structure"
+
+i then ran: npm install
+
+i then ran:
+git checkout master, to make sure it was on the master branch
+i then created a new branch: git branch check-reorder
 
 
 References: https://moodle.wit.ie/course/view.php?id=163135&section=7
