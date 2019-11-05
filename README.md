@@ -2,18 +2,41 @@
 
 Name of webApp: Agree or Disagree
 
-Created by: Barry Cronin Student Num: 20074828 github link to project: https://github.com/bazcron/agreeORdisagree 
-Youtube link to video: https://youtu.be/1hiWEJT3ass
+Created by: Barry Cronin Student Num: 20074828 
+github link to project: https://github.com/bazcron/Agile-Assignment-1
 
-This project is a webApp which shows statements (some controversal) to users and asks them if they Agree or Disagree with the statement.
+This is my API test automation & Source Control Project.
 
-The webapp will then show them the percentage of those who Agreed or Disagreed and to see if their share the opinion of the majority or if they opinion is different from most.
+Using my original webApp code for AgreeORdisagree i implemented tests for the 2 models i currently have,
+Statements and Users.
 
-Functionality.
+Statements Model:
+let mongoose = require('mongoose');
+let statementSchema = new mongoose.Schema({
+        id: Number,
+        statement: String,
+        agree: Number,
+        disagree:Number
+    },
+    { collection: 'statements' });
+module.exports = mongoose.model('statements', statementSchema);
 
-This part of the project is the server side of the project. The second part will incorporate the client side.
+Users Model:
+let mongoose = require('mongoose');
+let usersSchema = new mongoose.Schema({
+        id: Number,
+        name: String,
+        email: String,
+        password: String,
+        agree: Number,
+        disagree: Number
+    },
+    { collection: 'users' });
+module.exports = mongoose.model('users', usersSchema);
 
-I currently have 2 models: Statements and users.
+
+I opened a terminal and set up an initial git repository inside the project folder: git init
+
 
 
 
